@@ -39,17 +39,17 @@
 return [
     'db' => [
         'adapters' => [
-            'motdb' => [
+            'masterdb' => [
                 'driver'    => 'Pdo',
-                'dsn'       => 'mysql:dbname=motdb;host=localhost',
-                'username'  => 'motuser',
-                'password'  => 'motpassword'
+                'dsn'       => 'mysql:dbname=masterdb;host=localhost',
+                'username'  => 'masterdbuser',
+                'password'  => 'masterdbpassword'
             ],
-            'mambudb' => [
+            'slavedb' => [
                 'driver'    => 'Pdo',
-                'dsn'       => 'mysql:dbname=mambudb;host=localhost',
-                'username'  => 'motuser',
-                'password'  => 'motpassword'
+                'dsn'       => 'mysql:dbname=slavedb;host=localhost',
+                'username'  => 'slavedbuser',
+                'password'  => 'slavedbpassword'
             ]
         ]
     ],
