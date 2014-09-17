@@ -12,7 +12,7 @@ Submodules
 
 #### [ZFModuleIni](https://github.com/CodingMatters/ZFModuleIni) [![Latest Stable Version](https://poser.pugx.org/codingmatters/zf-module-ini/v/stable.svg)](https://packagist.org/packages/codingmatters/zf-module-ini) [![Total Downloads](https://poser.pugx.org/codingmatters/zf-module-ini/downloads.svg)](https://packagist.org/packages/codingmatters/zf-module-ini) [![Latest Unstable Version](https://poser.pugx.org/codingmatters/zf-module-ini/v/unstable.svg)](https://packagist.org/packages/codingmatters/zf-module-ini) [![License](https://poser.pugx.org/codingmatters/zf-module-ini/license.svg)](https://packagist.org/packages/codingmatters/zf-module-ini) 
 
-Generic "Application" module which includes initial configurations like application name, site URL and company/developer name. Learn more about its features [here](https://github.com/CodingMatters/ZFModuleIni).
+Generic "Application" module which includes initial configurations like application name, site URL and company/developer name. Learn more about its features [here](https://github.com/CodingMatters/ZFModuleIni#features).
 
 Installation
 ------------
