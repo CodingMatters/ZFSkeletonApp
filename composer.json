@@ -61,17 +61,19 @@
             "git submodule update"
         ],
         "post-install-cmd": [
-            "@install-ui-component"
+            "@install-ui-component",
+            "@check"
         ],
         "post-update-cmd": [
-            "@update-ui-component"
+            "@update-ui-component",
+            "@check"
         ],
         "check": [
             "@cs",
             "@test"
         ],
         "cs": "phpcs module",
-        "cs-fix": "phpcbf module/*",
+        "cs-fix": "phpcbf module",
         "test": "phpunit",
         "install-ui-component": [
             "rm -rf public/assets/jquery",
