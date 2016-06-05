@@ -3,7 +3,7 @@
 /**
  * The MIT License
  *
- * Copyright (c) 2014, contributors of Coding Matters.
+ * Copyright (c) 2016, Coding Matters, Inc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,21 +26,7 @@
 
 return [
     // This should be an array of module namespaces used in the application.
-    'modules' => [        
-        'Zend\ServiceManager\Di',
-        'Zend\Session',
-        'Zend\Mvc\Plugin\Prg',
-        'Zend\Mvc\Plugin\Identity',
-        'Zend\Mvc\Plugin\FlashMessenger',
-        'Zend\Mvc\Plugin\FilePrg',
-        'Zend\Mvc\I18n',
-        'Zend\Mvc\Console',
-        'Zend\Log',
-        'Zend\Form',
-        'Zend\Db',
-        'Zend\Cache',
-        'Zend\Router',
-        'Zend\Validator',
+    'modules' => [
         'EdpModuleLayouts',
         'Application',
     ],
