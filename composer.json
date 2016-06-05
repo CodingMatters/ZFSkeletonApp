@@ -117,12 +117,10 @@
             "git submodule update"
         ],
         "post-install-cmd": [
-            "@install-ui-component",
-            "@check"
+            "@install-ui-component"
         ],
         "post-update-cmd": [
-            "@update-ui-component",
-            "@check"
+            "@update-ui-component"
         ],
         "check": [
             "@cs",
