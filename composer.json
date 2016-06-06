@@ -17,17 +17,18 @@
     ],
     "require": {
         "php": "^5.6 || ^7.0",
+        "roave/security-advisories": "dev-master",
+        "evandotpro/edp-module-layouts": "dev-master",
+        "ocramius/proxy-manager": "^2.0",
         "zendframework/zend-component-installer": "^1.0 || ^0.2 || ^1.0.0-dev@dev",
         "zendframework/zend-skeleton-installer": "^1.0 || ^0.1.2 || ^1.0.0-dev@dev",
         "zendframework/zend-mvc": "^3.0",
-        "evandotpro/edp-module-layouts": "dev-master",
-        "zendframework/zend-navigation": "^2.7"
+        "codingmatters/site-module-ini": "^1.0 || ^0.1"
     },
     "require-dev": {
         "zendframework/zend-test": "^3.0",
         "squizlabs/php_codesniffer": "^2.3",
-        "phpbench/phpbench": "^0.11",
-        "filp/whoops": "^2.0"
+        "phpbench/phpbench": "^0.11"
     },
     "autoload": {
         "psr-4": {
@@ -36,14 +37,10 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ApplicationTest\\": "module/ApplicationTest/src/"
+            "ApplicationTest\\": "module/Application/test/"
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev",
-            "dev-develop": "2.0-dev"
-        },
         "zend-skeleton-installer": [
             {
                 "name": "zendframework/zend-cache",
@@ -102,7 +99,7 @@
                 "constraint": "^2.7.1",
                 "prompt": "Would you like to install sessions support?",
                 "module": true
-            },
+            },            
             {
                 "name": "zendframework/zend-servicemanager-di",
                 "constraint": "^1.0",
