@@ -26,23 +26,9 @@
 
 return [
     // This should be an array of module namespaces used in the application.
-    'modules' => [
-        'Zend\ServiceManager\Di',
-        'Zend\Session',
-        'Zend\Mvc\Plugin\Prg',
-        'Zend\Mvc\Plugin\Identity',
-        'Zend\Mvc\Plugin\FlashMessenger',
-        'Zend\Mvc\Plugin\FilePrg',
-        'Zend\Mvc\I18n',
-        'Zend\Mvc\Console',
-        'Zend\Log',
-        'Zend\Form',
-        'Zend\Db',
-        'Zend\Cache',
-        'Zend\Router',
-        'Zend\Validator',
+    'modules' => [        
         'EdpModuleLayouts',
-        'Site',
+        'Application',
     ],
     // These are various options for the listeners attached to the ModuleManager
     'module_listener_options' => [
