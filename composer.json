@@ -2,7 +2,7 @@
     "name": "codingmatters/zf-skeleton-app",
     "description": "Initial Zend Framework skeleton application structure",
     "license": "MIT",
-    "type": "application",
+    "type": "project",
     "keywords": [
         "skeleton application",
         "zf2"
