@@ -18,7 +18,7 @@
         "evandotpro/edp-module-layouts": "dev-master",
         "zendframework/zend-component-installer": "^1.0 || ^0.2",
         "zendframework/zend-skeleton-installer": "^1.0 || ^0.1",
-        "codingmatters/site-module-ini": "^1.0 || ^0.1"
+        "codingmatters/site-module-ini": "^1.0 || ^0.4"
     },
     "require-dev": {
         "zendframework/zend-test": "^3.0",
@@ -29,7 +29,7 @@
         "zend-skeleton-installer": [            
             {
                 "name": "codingmatters/dashboard-module-ini",
-                "constraint": "^1.0 || ~0.1",
+                "constraint": "^1.0 || ~0.3",
                 "prompt": "Would you like to install dashboard module?",
                 "module": true
             }
