@@ -3,9 +3,6 @@
 return [
     // This should be an array of module namespaces used in the application.
     'modules' => [
-        'Zend\Router',
-        'Zend\Validator',
-        'Dashboard',
         'Site',
         'Application',
         'EdpModuleLayouts'
