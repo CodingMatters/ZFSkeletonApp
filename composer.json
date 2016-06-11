@@ -15,7 +15,6 @@
     "require": {
         "php": "^5.6 || ^7.0",
         "roave/security-advisories": "dev-master",
-        "evandotpro/edp-module-layouts": "dev-master",
         "zendframework/zend-component-installer": "^1.0 || ^0.2",
         "zendframework/zend-skeleton-installer": "^1.0 || ^0.1",
         "codingmatters/zf-module-ini": "^1.0 || ^0.4"
@@ -45,12 +44,10 @@
             "ApplicationTest\\": "module/Application/test/"
         }
     },
-    "scripts": {
-        "post-root-package-install": [
-            "@include-module-config"
-        ],
+    "scripts": {        
         "post-install-cmd": [
-            "@install-ui-component"            
+            "@install-ui-component",
+            "@include-module-config"
         ],
         "post-update-cmd": [
             "@update-ui-component"
