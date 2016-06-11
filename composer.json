@@ -18,7 +18,7 @@
         "evandotpro/edp-module-layouts": "dev-master",
         "zendframework/zend-component-installer": "^1.0 || ^0.2",
         "zendframework/zend-skeleton-installer": "^1.0 || ^0.1",
-        "codingmatters/site-module-ini": "^1.0 || ^0.4"
+        "codingmatters/zf-module-ini": "^1.0 || ^0.4"
     },
     "require-dev": {
         "zendframework/zend-test": "^3.0",
@@ -26,10 +26,10 @@
         "phpbench/phpbench": "^0.11"
     },
     "extra": {
-        "zend-skeleton-installer": [            
+        "zend-skeleton-installer": [
             {
                 "name": "codingmatters/dashboard-module-ini",
-                "constraint": "^1.0 || ~0.3",
+                "constraint": "^1.0 || ~0.4",
                 "prompt": "Would you like to install dashboard module?",
                 "module": true
             }
@@ -47,16 +47,13 @@
     },
     "scripts": {
         "post-root-package-install": [
-            "git submodule init",
-            "git submodule update"
+            "@include-module-config"
         ],
         "post-install-cmd": [
-            "@install-ui-component",
-            "@include-module-config"
+            "@install-ui-component"            
         ],
         "post-update-cmd": [
-            "@update-ui-component",
-            "@include-module-config"
+            "@update-ui-component"
         ],
         "check": [
             "@cs",
@@ -90,8 +87,7 @@
             "rm -rf bower_components"
         ],
         "include-module-config": [
-            "cp -au vendor/codingmatters/site-module-ini/config/autoload/site-module.local.php-dist config/autoload/site-module.local.php",
-            "cp -au vendor/codingmatters/dashboard-module-ini/config/autoload/dashboard-module.local.php-dist config/autoload/dashboard-module.local.php"
+            "cp -au module/Application/config/autoload/app-settings.local.php-dist config/autoload/app-settings.local.php"
         ]
     }
 }
