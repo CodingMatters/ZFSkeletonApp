@@ -45,12 +45,10 @@
             "ApplicationTest\\": "module/Application/test/"
         }
     },
-    "scripts": {
-        "post-root-package-install": [
-            "@include-module-config"
-        ],
+    "scripts": {        
         "post-install-cmd": [
-            "@install-ui-component"            
+            "@install-ui-component",
+            "@include-module-config"
         ],
         "post-update-cmd": [
             "@update-ui-component"
