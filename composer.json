@@ -15,28 +15,23 @@
     "require": {
         "php": "^5.6 || ^7.0",
         "roave/security-advisories": "dev-master",
-        "zendframework/zend-skeleton-installer": "^1.0 || ^0.1.3",        
+        "zendframework/zend-skeleton-installer": "^1.0 || ^0.1.3",     
+        "zendframework/zend-component-installer": "^1.0 || ^0.3",
+        "zendframework/zend-developer-tools": "^1.1.0",
+        "zendframework/zend-mvc": "^3.0.1",
         "zfcampus/zf-development-mode": "^3.0",
         "codingmatters/zf-module-ini": "^1.0 || ^0.4"
     },
-    "require-dev": {
-        "zendframework/zend-component-installer": "^1.0 || ^0.3",
-        "zendframework/zend-developer-tools": "^1.1.0",
+    "require-dev": {        
         "zendframework/zend-test": "^3.0",
         "squizlabs/php_codesniffer": "^2.3",
         "phpbench/phpbench": "^0.11"
     },
     "extra": {
-        "zend-skeleton-installer": [
+        "zend-skeleton-installer": [            
             {
-                "name": "codingmatters/site-module-ini",
-                "constraint": "^1.0 || ~0.6.1",
-                "prompt": "Would you like to install site module?",
-                "module": true
-            },
-            {
-                "name": "codingmatters/dashboard-module-ini",
-                "constraint": "^1.0 || ~0.4",
+                "name": "codingmatters/dashboard-component-installer",
+                "constraint": "^1.0 || ~0.1",
                 "prompt": "Would you like to install dashboard module?",
                 "module": true
             }
@@ -93,7 +88,7 @@
         ],
         "include-module-config": [
             "cp -au module/Application/config/autoload/app-settings.local.php-dist config/autoload/app-settings.local.php"
-        ],        
+        ],
         "development-disable": "zf-development-mode disable",
         "development-enable": "zf-development-mode enable",
         "development-status": "zf-development-mode status",
