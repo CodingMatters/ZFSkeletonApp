@@ -1,12 +1,7 @@
 <?php
 
 use Zend\Mvc\Application;
-
-// For debugging purpose only
-if ($_SERVER['APPLICATION_ENV'] == 'development') {
-     error_reporting(E_ALL);
-     ini_set("display_errors", 1);
-}
+use Zend\Stdlib\ArrayUtils;
 
 /**
  * This makes our life easier when dealing with paths. Everything is relative
@@ -35,5 +30,11 @@ if (! class_exists(Application::class)) {
     );
 }
 
+// Retrieve configuration
+$appConfig = require __DIR__ . '/../config/application.config.php';
+if (file_exists(__DIR__ . '/../config/development.config.php')) {
+    $appConfig = ArrayUtils::merge($appConfig, require __DIR__ . '/../config/development.config.php');
+}
+
 // Run the application!
-Application::init(require __DIR__ . '/../config/application.config.php')->run();
+Application::init($appConfig)->run();
