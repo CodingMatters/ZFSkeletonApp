@@ -3,7 +3,6 @@
     "description": "Integration for Zend Framework skeleton application",
     "license": "MIT",
     "type": "project",
-    "keywords": ["zf skeleton application example"],
     "homepage": "https://github.com/CodingMatters/ZFSkeletonApp/",
     "authors": [
         {
@@ -13,22 +12,21 @@
         }
     ],
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "~7.0.0",
         "roave/security-advisories": "dev-master",
-        "zendframework/zend-skeleton-installer": "^1.0 || ^0.1.3",     
-        "zendframework/zend-component-installer": "^1.0 || ^0.3",
-        "zendframework/zend-developer-tools": "^1.1.0",
-        "zendframework/zend-mvc": "^3.0.1",
-        "zfcampus/zf-development-mode": "^3.0",
-        "codingmatters/zf-module-ini": "^1.0 || ^0.4"
+        "zendframework/zend-skeleton-installer": "^0.1.3",        
+        "codingmatters/zf-module-ini": "^0.4.3"
     },
     "require-dev": {        
-        "zendframework/zend-test": "^3.0",
-        "squizlabs/php_codesniffer": "^2.3",
-        "phpbench/phpbench": "^0.11"
+        "zendframework/zend-component-installer": "^1.0 || ^0.3",
+        "zendframework/zend-developer-tools": "^1.1.1",
+        "zfcampus/zf-development-mode": "^3.0",
+        "squizlabs/php_codesniffer": "^2.7.1",
+        "zendframework/zend-test": "^3.0.2",
+        "sebastian/phpcpd": "^2.0.4"
     },
     "extra": {
-        "zend-skeleton-installer": [            
+        "zend-skeleton-installer": [
             {
                 "name": "codingmatters/dashboard-component-installer",
                 "constraint": "^1.0 || ~0.1",
@@ -47,22 +45,27 @@
             "ApplicationTest\\": "module/Application/test/"
         }
     },
-    "scripts": {        
+    "scripts": {
         "post-install-cmd": [
             "@install-ui-component",
-            "@include-module-config"
+            "@include-module-config",
+            "@debug",
+            "@serve"
         ],
         "post-update-cmd": [
             "@update-ui-component",
-            "@include-module-config"
+            "@include-module-config",
+            "@debug"
         ],
-        "check": [
+        "debug": [
             "@cs",
+            "@cpd",
             "@test"
         ],
-        "cs": "phpcs module",
-        "cs-fix": "phpcbf module",
-        "test": "phpunit",        
+        "cs": "phpcs --ignore=/vendor,/build module",
+        "cs-fix": "phpcbf --ignore=/vendor,/build module",
+        "cpd": "phpcpd --exclude=/vendor,/build --fuzzy module",
+        "test": "phpunit --verbose",
         "install-ui-component": [
             "@remove-assets",
             "bower install",
